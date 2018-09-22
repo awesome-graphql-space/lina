@@ -2,7 +2,7 @@
 
 ## Description
 
-gueva api
+An easy server :)
 
 ## Installation
 
