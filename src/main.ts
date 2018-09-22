@@ -39,22 +39,6 @@ async function bootstrap() {
   }));  // rate limit security options
   app.use(compression());  // rate limiting
 
-  ////////////////////////// MICROSERVICE GATEWAYS
-  // const mqttService = app.connectMicroservice({
-  //   transport: Transport.MQTT,
-  //   options: {
-  //     host: 'localhost',
-  //     port: 1883,
-  //   },
-  // });
-
-  // const redisService = app.connectMicroservice({
-  //   transport: Transport.REDIS,
-  //   options: {
-  //     url: 'redis://localhost:6379',
-  //   },
-  // });
-
   ///////// START APP ///////
   await app.startAllMicroservicesAsync();
 
