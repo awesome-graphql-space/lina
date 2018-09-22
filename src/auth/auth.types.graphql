@@ -1,0 +1,29 @@
+# import * from '../users/users.types.graphql'
+# import * from '../entry.graphql'
+
+extend type Mutation {
+  signupWithEmail(input: CreateUserInput): AuthPayload
+  signupWithTwitter(input: CreateUserInput): AuthPayload
+  signupWithFacebook(input: CreateUserInput): AuthPayload
+  loginWithEmail(input: CreateUserInput): AuthPayload
+  loginWithFacebook(input: CreateUserInput): AuthPayload
+  loginWithTwitter(input: CreateUserInput): AuthPayload
+  logout(input: CreateUserInput): AuthPayload
+  refreshToken: AuthPayload
+  resetPassword: User
+  forgotPassword: AuthPayload
+  changePassword: AuthPayload
+}
+
+type Subscription {
+  userCreated: User
+  userLogout: User
+  userLogin: User
+}
+
+type AuthPayload {
+  refreshToken: String!
+  token: String!
+  expireDate: DateTime!
+  user: User!
+}

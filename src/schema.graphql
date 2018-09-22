@@ -1,0 +1,14 @@
+# import * from './entry.graphql'
+# import * from './users/users.types.graphql'
+
+type Query {
+  currentUser: User!
+}
+
+type Mutation {
+  signup(input: CreateUserInput): User
+}
+
+type Subscription {
+  profileUpdate: User
+}

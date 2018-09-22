@@ -1,0 +1,42 @@
+input CreateBrandInput {
+	name: String!
+	description: String
+	price: Float!
+  currency: CurrencyInput!
+	brandId: String!
+}
+
+type Brand {
+  	#  Generated id for a user. read-only
+  _id: ID!
+  #  A unique identifier for the object.
+  _key: ID!
+  #  A unique identifier for the object.
+  _rev: ID!
+
+  # Date and time the object was created
+  createdAt: DateTime!
+  # Date and time the object was created
+  updatedAt: DateTime!
+
+	slug: String!
+	name: String!
+	price: Price!
+  inventory: Int!
+  brand: Brand!
+}
+
+type BrandEdge {
+  node: Brand!
+  cursor: String!
+}
+
+type AggregateBrand {
+  count: Int!
+}
+
+type BrandConnection {
+  pageInfo: PageInfo!
+  edges: [BrandEdge]!
+  aggregate: AggregateBrand!
+}

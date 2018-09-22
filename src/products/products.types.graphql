@@ -1,0 +1,65 @@
+input CreateProductInput {
+	name: String!
+	description: String
+	price: Float!
+  currency: CurrencyInput!
+	brandId: String!
+}
+
+input UpdateProductInput {
+	name: String
+	description: String
+	price: Float
+  currency: CurrencyInput
+}
+
+type Product {
+  	#  Generated id for a user. read-only
+  _id: ID!
+  #  A unique identifier for the object.
+  _key: ID!
+  #  A unique identifier for the object.
+  _rev: ID!
+
+  # Date and time the object was created
+  createdAt: DateTime!
+  # Date and time the object was created
+  updatedAt: DateTime!
+
+	slug: String!
+	name: String!
+	price: Price!
+  priceId: String
+
+  inventory: Int!
+  brand: Brand!
+  brandId: String
+
+  analytics: ProductAnalytics
+}
+
+type ProductEdge {
+  node: Product!
+  cursor: String!
+}
+
+type AggregateProduct {
+  count: Int!
+}
+
+type ProductConnection {
+  pageInfo: PageInfo!
+  edges: [ProductEdge]!
+  aggregate: AggregateProduct!
+}
+
+
+extend type Query {
+  product(id: ID!): Product!
+}
+
+extend type Mutation {
+  createProduct(input: CreateProductInput!): Product! 
+  deleteProduct(id: ID!): Product!
+  updateProduct(input: UpdateProductInput): Product!
+}
