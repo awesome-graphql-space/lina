@@ -40,13 +40,13 @@ async function bootstrap() {
   app.use(compression());  // rate limiting
 
   ////////////////////////// MICROSERVICE GATEWAYS
-  const mqttService = app.connectMicroservice({
-    transport: Transport.MQTT,
-    options: {
-      host: 'localhost',
-      port: 1883,
-    },
-  });
+  // const mqttService = app.connectMicroservice({
+  //   transport: Transport.MQTT,
+  //   options: {
+  //     host: 'localhost',
+  //     port: 1883,
+  //   },
+  // });
 
   // const redisService = app.connectMicroservice({
   //   transport: Transport.REDIS,
@@ -58,7 +58,9 @@ async function bootstrap() {
   ///////// START APP ///////
   await app.startAllMicroservicesAsync();
 
-  await app.listen(4000);
+  await app.listen(3000);
+  console.log('sjjj')
 
 }
 bootstrap();
+
