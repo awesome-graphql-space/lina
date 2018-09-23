@@ -18,6 +18,7 @@ export class GraphqlOptions implements GqlOptionsFactory {
         outputAs: 'class',
       },*/
       resolvers: { JSON: GraphQLJSON },
+      context: ({ req }) => ({ req })
     };
   }
 }
