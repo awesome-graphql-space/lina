@@ -17,12 +17,13 @@ import * as passport from 'passport';
         expiresIn: 3600,
       },
     }),
-    UsersModule
+    UsersModule,
   ],
   controllers: [AuthController],
   providers: [
     AuthService,
-    JwtStrategy
+    JwtStrategy,
+    HttpStrategy,
   ],
 })
 export class AuthModule {}
