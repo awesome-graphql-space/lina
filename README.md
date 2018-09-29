@@ -74,8 +74,8 @@ Lina is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-* Website - [https://awesomegql.com](https://awesomegql.com/)
-* Twitter - [@linaframework](https://twitter.com/nestframework)
+* Website (Coming Soon) - [https://awesomegql.com](https://awesomegql.com/)
+* Twitter - [@linaframework](https://twitter.com/linaframework)
 
 ## License
 
