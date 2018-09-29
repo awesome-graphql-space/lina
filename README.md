@@ -7,7 +7,7 @@
 [linux-image]: https://img.shields.io/travis/nestjs/awesome-graphql-space/lina.svg?label=linux
 [linux-url]: https://travis-ci.org/awesome-graphql-space/lina
 
-  <p align="center">is an extensible, non-opinionated graphql powered nodejs backend with a suite of features and apps to support most of the basic and advance features your project will need</p>
+  <p align="center">Lina is an extensible, un-opinionated graphql powered nodejs backend with a suite of features and apps to support most of the basic and advance features your project will need</p>
     <p align="center"> </p>
 
 <br />
@@ -20,7 +20,7 @@ As developers every time we start a new backend project, we start adding support
 
 For us getting that unique part of your app should be the focus of your team and repetitive/generic features should come out of the box being pluggable and extendable giving you so much flexibility and power at the same time
 
-Lina is still in its development stage and such is not usable right now, but you can Star, Contribute or just watch as it grow.
+Lina is still in its development stage and so is not usable right now, but you can Star, Contribute or just watch as it grows.
 
 ## Installation
 
