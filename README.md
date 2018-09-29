@@ -14,11 +14,11 @@
 
 ## Description
 
-As developers every time we start a new backend project, we start adding support for admin dashboard, authentication, authorization, instant messaging or chat, live chat, email notifications and scheduler, push notification, news activity activity feed, SaaS, e-commerce, recommendations, social, etc, and the most important a scalable production ready backend server. 
+As developers every time we start a new backend project, we start adding support for admin dashboard, authentication, authorization, instant messaging or chat, live chat, email notifications and scheduler, push notification, news activity feed, SaaS, e-commerce, recommendations, social, etc, and the most important a scalable production ready backend server. 
 
-[Lina](https://github.com/awesome-graphql-space/lina) is an extensible, un-opinionated graphql powered nodejs backend with a suite of features and apps to support most of the basic and advance features your project will need. [Lina](https://github.com/awesome-graphql-space/lina) helps you as a developer both fronend and backend focus on what makes your app unique and let lina handle the rest.
+[Lina](https://github.com/awesome-graphql-space/lina) is an extensible, un-opinionated graphql powered nodejs backend with a suite of features and apps to support most of the basic and advance features your project will need. [Lina](https://github.com/awesome-graphql-space/lina) helps you as a developer both frontend and backend focus on what makes your app unique and let lina handle the rest.
 
-For us getting that unique part of your app should be the focus of your team and repetitive/generic features should come put of the box being pluggable and extendable giving you so much flexibilty and power at the same time
+For us getting that unique part of your app should be the focus of your team and repetitive/generic features should come out of the box being pluggable and extendable giving you so much flexibility and power at the same time
 
 Lina is still in its development stage and such is not usable right now, but you can Star, Contribute or just watch as it grow.
 
@@ -66,7 +66,7 @@ comming soon
 * [O] Server Side Subscriptions
 
 ## Contribute
-We are ambitious, we are talented, we don't believe in impossible and we are happy people, if you want to contibute just react out to [Manjula Dube](https://twitter.com/manjula_dube) or [Rex Raphael](https://twitter.com/rex_raph).
+We are ambitious, we are talented, we don't believe in impossible and we are happy people, if you want to contribute just reach out to [Manjula Dube](https://twitter.com/manjula_dube) or [Rex Raphael](https://twitter.com/rex_raph).
 
 ## Support
 
