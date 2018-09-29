@@ -41,17 +41,17 @@ comming soon
 
 **1. Features**
 - [X] Admin Dashboard
-- [X] GraphQL
+- [] GraphQL
 - [X] Authentication
   - [O] OAuth2
   - [O] Fingerprint
   - [O] Github
-  - [O] Mobile
-  - [0] Username
+  - [X] Mobile
+  - [X] Username
 - [X] Realtime
-- [X] Email
-- [X] Push notification
-- [X] Analytics
+- [O] Email
+- [O] Push notification
+- [O] Analytics
 
 **2. Apps**
 * [O] ChatQL
