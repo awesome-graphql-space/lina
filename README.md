@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://awesomegql.com" target="blank"><img src="https://cdn1.imggmi.com/uploads/2018/9/29/65297afbdd2c9834f6fd708c20dd3578-full.jpg" width="320" alt="Lina Logo" /></a>
+  <a href="https://awesomegql.com" target="blank"><img src="https://cdn1.imggmi.com/uploads/2018/9/29/71896f5e82dd199ac5d00a5dc857be26-full.png" width="320" alt="Lina Logo" /></a>
 </h1>
 
 [travis-image]: https://api.travis-ci.org/awesome-graphql-space/lina.svg?branch=master
