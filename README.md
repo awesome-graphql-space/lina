@@ -79,4 +79,4 @@ Lina is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## License
 
-Awesome-Graphql-Space is [MIT licensed](LICENSE).
+Awesome-Graphql-Space is [MIT licensed](https://github.com/awesome-graphql-space/lina/blob/master/LICENSE.md).
