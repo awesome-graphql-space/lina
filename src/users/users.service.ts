@@ -1,32 +1,40 @@
 import { Injectable } from '@nestjs/common';
+import { User } from '../../../gueva-api/src/graphql.schema';
 
 @Injectable()
 export class UsersService {
 
-  async findOneById(token: string) {
+  async findOneById(token: string): Promise<User> {
     // await
+    return null;
   }
 
-  async findOneByEmail(email: string) {
+  async findOneByEmail(email: string): Promise<User> {
     // await
+    return null;
   }
 
-  async findOneByUsername(username: string) {
+  async findOneByUsername(username: string): Promise<User> {
     // await
+    return null;
   }
 
-  async findOneByUsernameAndUpdate(username: string, data: object) {
+  async findOneByUsernameAndUpdate(username: string, data: object): Promise<User> {
     // await
+    return null;
   }
-  async findOneByIdAndUpdate(token: string, data: object) {
+  async findOneByIdAndUpdate(token: string, data: object): Promise<User> {
     // await
-  }
-
-  async findOneByEmailAndUpdate(email: string, data: object) {
-    // await
+    return null;
   }
 
-  async removeOneById(token: string) {
+  async findOneByEmailAndUpdate(email: string, data: object): Promise<User> {
     // await
+    return null;
+  }
+
+  async removeOneById(token: string): Promise<User> {
+    // await
+    return null;
   }
 }

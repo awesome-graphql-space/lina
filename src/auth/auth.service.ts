@@ -33,12 +33,6 @@ export class AuthService {
   async validateUser(token: string): Promise<User> {
     // Validate if token passed along with HTTP request
     // is associated with any registered account in the database
-    return await this.usersService.findOneById(token);
-  }
-
-  async validateUser(token: string): Promise<User> {
-    // Validate if token passed along with HTTP request
-    // is associated with any registered account in the database
-    return await this.usersService.findOneById(token);
+    return await null; // this.usersService.findOneById(token);
   }
 }
