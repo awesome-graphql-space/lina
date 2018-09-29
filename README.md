@@ -20,7 +20,7 @@ As developers every time we start a new backend project, we start adding support
 
 For us getting that unique part of your app should be the focus of your team and repetitive/generic features should come out of the box being pluggable and extendable giving you so much flexibility and power at the same time
 
-Lina is still in its development stage and such is not usable right now, but you can Star, Contribute or just watch as it grow.
+Lina is still in its development stage and so is not usable right now, but you can Star, Contribute or just watch as it grows.
 
 ## Installation
 

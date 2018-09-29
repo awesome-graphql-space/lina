@@ -15,7 +15,7 @@
     "baseUrl": "./src"
   },
   "include": [
-    "src/**/*"
+    "src/**/*", "../lina-orm/src/models/document.ts"
   ],
   "exclude": [
     "node_modules",
