@@ -40,7 +40,7 @@
     "graphql-type-json": "0.2.1",
     "hbs": "4.0.1",
     "helmet": "3.13.0",
-    "merge-graphql-schemas": "1.5.3",
+    "merge-graphql-schemas": "1.5.7",
     "mqtt": "2.18.8",
     "passport": "0.4.0",
     "passport-facebook": "2.1.1",
