@@ -51,7 +51,7 @@
     "pug": "2.0.3",
     "redis": "2.8.0",
     "reflect-metadata": "0.1.12",
-    "rxjs": "6.3.2",
+    "rxjs": "6.3.3",
     "typescript": "2.9.2"
   },
   "devDependencies": {
