@@ -20,6 +20,18 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
+
+
+
+
+
+
+
+
+
+
+
+    
     "moduleResolution": "node",
     "noImplicitReturns": true,
     "noImplicitThis": true,
