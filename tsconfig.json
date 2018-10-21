@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
     "module": "commonjs",
+    "baseUrl": "./",  // all paths are relative to the baseUrl
+    "paths": {
+        "@server/*" : ["src/server/*"]
+    },
     "declaration": false,
     "noImplicitAny": false,
     "removeComments": true,
@@ -8,17 +12,53 @@
     "allowSyntheticDefaultImports": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es6",
     "sourceMap": true,
     "allowJs": true,
-    "outDir": "./dist",
-    "baseUrl": "./src"
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "strictNullChecks": true,
+    "strict": true,
+    "pretty": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es2016",
+    "lib": [
+      "es5",
+      "es6",
+      "dom",
+      "es2017",
+      "es2015.core",
+      "es2015.collection",
+      "es2015.generator",
+      "es2015.iterable",
+      "es2015.promise",
+      "es2015.proxy",
+      "es2015.reflect",
+      "es2015.symbol",
+      "es2015.symbol.wellknown",
+      "esnext.asynciterable"
+    ],
+    "outDir": "./dist"
   },
   "include": [
-    "src/**/*", "../lina-orm/src/models/document.ts"
+    "src/**/*", "razzle.config.js", "apollo.config.js"
   ],
   "exclude": [
     "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "razzle.config.js",
     "**/*.spec.ts"
-  ]
+  ],
+  "types": ["typePatches", "node", "webpack-env"]
 }

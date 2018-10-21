@@ -2,8 +2,8 @@ import { NestFactory } from '@nestjs/core';
 import { Transport } from '@nestjs/microservices';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { join } from 'path';
-import { Constants } from './constants';
-import { AppModule } from './app.module';
+import { Constants } from './server/constants';
+import { AppModule } from './server/app.module';
 import * as helmet from 'helmet';
 import * as rateLimit from 'express-rate-limit';
 import * as csurf from 'csurf';
@@ -46,4 +46,3 @@ async function bootstrap() {
 
 }
 bootstrap();
-

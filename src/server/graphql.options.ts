@@ -1,0 +1,24 @@
+import { GqlOptionsFactory, GqlModuleOptions } from '@nestjs/graphql';
+import { Injectable } from '@nestjs/common';
+import * as GraphQLJSON from 'graphql-type-json';
+import { join } from 'path';
+
+@Injectable()
+export class GraphqlOptions implements GqlOptionsFactory {
+  createGqlOptions(): Promise<GqlModuleOptions> | GqlModuleOptions {
+    return {
+      typePaths: ['./**/*.graphql'],
+      path: '/graphql',
+      installSubscriptionHandlers: true,
+      resolverValidationOptions: {
+        requireResolversForResolveType: false,
+      },
+      definitions: {
+        path: join(process.cwd(), 'src/graphql.schema.d.ts'),
+        outputAs: 'class',
+      },
+      resolvers: { JSON: GraphQLJSON },
+      context: ({ req }) => ({ req }),
+    };
+  }
+}

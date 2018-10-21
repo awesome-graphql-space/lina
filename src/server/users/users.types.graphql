@@ -1,0 +1,59 @@
+#import * from '../entry.grapql'
+
+input CreateUserInput {
+	username: String!
+	displayName: String!
+	email: String
+	mobile: String
+	password: String!
+}
+
+input ChangePasswordInput {
+	oldPassword: String!
+	newPassword: String!
+}
+
+input LoginEmailInput {
+	email: String!
+	password: String!
+}
+
+input LoginUsernameInput {
+	username: String!
+	password: String!
+}
+
+type User {
+		#  Generated id for a user. read-only
+  _id: ID!
+  #  A unique identifier for the object.
+  _key: ID!
+  #  A unique identifier for the object.
+  _rev: ID!
+
+  # Date and time the object was created
+  createdAt: DateTime!
+  # Date and time the object was created
+  updatedAt: DateTime!
+	# Username names
+	username: String!
+  displayName: String!
+	email: String
+	mobile: String!
+	password: String!
+}
+
+type UserEdge {
+  node: User!
+  cursor: String!
+}
+
+type AggregateUser {
+  count: Int!
+}
+
+type UserConnection {
+  pageInfo: PageInfo!
+  edges: [UserEdge]!
+  aggregate: AggregateUser!
+}
