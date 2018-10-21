@@ -1,4 +1,5 @@
 <h1 align="center">
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
   <a href="https://linaframework.com" target="blank"><img src="https://cdn1.imggmi.com/uploads/2018/9/29/0a7d1413bd0bafe47d4be7df23505382-full.png" width="320" alt="Lina Logo" /></a>
 </h1>
 
@@ -80,3 +81,15 @@ Lina is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Awesome-Graphql-Space is [MIT licensed](https://github.com/awesome-graphql-space/lina/blob/master/LICENSE.md).
+
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars2.githubusercontent.com/u/11243590?v=4" width="100px;"/><br /><sub><b>Rex Raphael</b></sub>](http://rexraphael.com)<br />[💬](#question-juicycleff "Answering Questions") [📝](#blog-juicycleff "Blogposts") [🐛](https://github.com/Rex Raphael/lina/issues?q=author%3Ajuicycleff "Bug reports") [💻](https://github.com/Rex Raphael/lina/commits?author=juicycleff "Code") [📖](https://github.com/Rex Raphael/lina/commits?author=juicycleff "Documentation") [📋](#eventOrganizing-juicycleff "Event Organizing") [💡](#example-juicycleff "Examples") [🤔](#ideas-juicycleff "Ideas, Planning, & Feedback") [🚇](#infra-juicycleff "Infrastructure (Hosting, Build-Tools, etc)") [📦](#platform-juicycleff "Packaging/porting to new platform") [🔌](#plugin-juicycleff "Plugin/utility libraries") [👀](#review-juicycleff "Reviewed Pull Requests") [📢](#talk-juicycleff "Talks") [⚠️](https://github.com/Rex Raphael/lina/commits?author=juicycleff "Tests") [🔧](#tool-juicycleff "Tools") |
+| :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!

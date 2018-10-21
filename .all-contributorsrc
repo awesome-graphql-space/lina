@@ -1,0 +1,36 @@
+{
+  "projectName": "lina",
+  "projectOwner": "Rex Raphael",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "juicycleff",
+      "name": "Rex Raphael",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11243590?v=4",
+      "profile": "http://rexraphael.com",
+      "contributions": [
+        "question",
+        "blog",
+        "bug",
+        "code",
+        "doc",
+        "eventOrganizing",
+        "example",
+        "ideas",
+        "infra",
+        "platform",
+        "plugin",
+        "review",
+        "talk",
+        "test",
+        "tool"
+      ]
+    }
+  ]
+}
