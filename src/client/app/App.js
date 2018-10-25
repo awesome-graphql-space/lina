@@ -26,28 +26,48 @@ class App extends React.PureComponent<PropsT> {
         const { t } = this.props;
 
         return (
-            // <div className={css.wrapper}>
-            //     <Helmet defaultTitle="React SSR Starter" titleTemplate="%s – React SSR Starter" />
-            //     <h1>
-            //         <img src={require('./assets/react.svg')} className={css.reactLogo} /> React SSR Setup
-            //     </h1>
-            //     <h2>{t('features')}</h2>
+            <>
+               <div className={css.wrapper}>
+                  <Helmet defaultTitle="Lina Admin" titleTemplate="%s – Lina Admin" />
+                  <h1>
+                      <img src={require('./assets/react.svg')} className={css.reactLogo} /> Lina Admin
+                  </h1>
+                  <h2>{t('features')}</h2>
 
-            //     <Chat />
+               	<Chat />
 
-            //     <h2>{t('i18n-example')}</h2>
-            //     <p>
-            //         <button value="de-DE" onClick={this.setLanguage}>
-            //             Deutsch
-            //         </button>
-            //         <button value="en-US" onClick={this.setLanguage}>
-            //             English
-            //         </button>
-            //     </p>
-            // </div>
-            <FadeIn>
-                <Chat />
-            </FadeIn>
+                  <h2>{t('i18n-example')}</h2>
+                  <p>
+                     <button value="de-DE" onClick={this.setLanguage}>
+                        Deutsch
+                     </button>
+                     <button value="en-US" onClick={this.setLanguage}>
+                        English
+                     </button>
+                  </p>
+               </div>
+					<FadeIn>
+						<div className={css.wrapper}>
+							<Helmet defaultTitle="Lina Admin" titleTemplate="%s – Lina Admin" />
+							<h1>
+								<img src={require('./assets/react.svg')} className={css.reactLogo} /> Lina Admin
+							</h1>
+							<h2>{t('features')}</h2>
+
+							<Chat />
+
+							<h2>{t('i18n-example')}</h2>
+							<p>
+								<button value="de-DE" onClick={this.setLanguage}>
+									Deutsch
+								</button>
+								<button value="en-US" onClick={this.setLanguage}>
+									English
+								</button>
+							</p>
+						</div>
+					</FadeIn>
+            </>
         );
     }
 }
