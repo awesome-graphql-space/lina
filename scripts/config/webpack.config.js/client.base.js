@@ -8,7 +8,7 @@ module.exports = {
     name: 'client',
     target: 'web',
     entry: {
-        bundle: ['@babel/polyfill', path.resolve(__dirname, '../../../src/client/index.js')],
+        bundle: ['@babel/polyfill', path.resolve(__dirname, '../../src/client/index.js')],
     },
     output: {
         path: path.join(paths.clientBuild, paths.publicPath),
@@ -31,7 +31,6 @@ module.exports = {
     optimization: {
         namedModules: true,
         noEmitOnErrors: true,
-        // concatenateModules: true,
         splitChunks: {
             cacheGroups: {
                 commons: {
@@ -50,7 +49,6 @@ module.exports = {
         colors: true,
         hash: false,
         modules: false,
-        errors: true,
         reasons: false,
         timings: true,
         version: false,

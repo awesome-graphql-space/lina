@@ -31,13 +31,13 @@ async function bootstrap() {
   SwaggerModule.setup(Constants.SWAGGER_MOUNT_POINT, app, document);
 
   //////////////////////////// SECURITY SECTION ////////////////////////
-  app.use(helmet());  // helmet
+  // app.use(helmet());  // helmet
   // app.use(csurf()); // Cross-site request forgery (known as CSRF or XSRF) option
-  app.use(rateLimit({
+  /*app.use(rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
   }));  // rate limit security options
-  app.use(compression());  // rate limiting
+  app.use(compression());  // rate limiting*/
 
   ///////// START APP ///////
   await app.startAllMicroservicesAsync();

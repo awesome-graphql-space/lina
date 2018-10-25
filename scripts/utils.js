@@ -11,7 +11,7 @@ const compilerPromise = (compiler) => {
             if (!stats.hasErrors()) {
                 return resolve();
             }
-            return reject(stats);
+            return reject('Compilation failed');
         });
     });
 };

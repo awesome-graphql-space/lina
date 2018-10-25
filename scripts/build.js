@@ -5,12 +5,15 @@ const webpackConfig = require('./config/webpack.config.js')(process.env.NODE_ENV
 const paths = require('./config/paths');
 const { logMessage, compilerPromise } = require('./utils');
 
+const { choosePort } = require('react-dev-utils/WebpackDevServerUtils');
+
 const generateStaticHTML = async () => {
     const nodemon = require('nodemon');
     const fs = require('fs');
     const puppeteer = require('puppeteer');
+    const port = await choosePort('localhost', 8505);
 
-    process.env.PORT = 8500;
+    process.env.PORT = port;
 
     const script = nodemon({
         script: `${paths.serverBuild}/server.js`,
@@ -18,17 +21,18 @@ const generateStaticHTML = async () => {
     });
 
     script.on('start', async () => {
-        // Only needed inside docker
-        // {executablePath: '/usr/bin/chromium-browser', args: ['--no-sandbox', '--headless', '--disable-gpu']}
-        setTimeout(async function() {
+        try {
             const browser = await puppeteer.launch();
             const page = await browser.newPage();
-            await page.goto(`http://localhost:${process.env.PORT}`);
+            await page.goto(`http://localhost:${port}`);
             const pageContent = await page.content();
             fs.writeFileSync(`${paths.clientBuild}/index.html`, pageContent);
             await browser.close();
             process.exit();
-        }, 1500);
+        } catch (err) {
+            console.log(err);
+            process.exit(1);
+        }
     });
 
     script.on('quit', () => {
