@@ -1,138 +1,162 @@
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const generateSourceMap = process.env.OMIT_SOURCEMAP === "true" ? false : true;
+
+const cssRegex = /\.css$/;
+const cssModuleRegex = /\.module\.css$/;
 
 const babelLoader = {
-    test: /\.(js|jsx)$/,
-    exclude: /node_modules/,
-    loader: 'babel-loader',
+  test: /\.(js|jsx|mjs)$/,
+  exclude: /node_modules/,
+  loader: "babel-loader",
+  options: {
+    plugins: [
+      [
+        require.resolve("babel-plugin-named-asset-import"),
+        {
+          loaderMap: {
+            svg: {
+              ReactComponent: "@svgr/webpack?-prettier,-svgo![path]"
+            }
+          }
+        }
+      ]
+    ]
+  }
+};
+
+const cssModuleLoaderClient = {
+  test: cssModuleRegex,
+  use: [
+    "css-hot-loader",
+    MiniCssExtractPlugin.loader,
+    {
+      loader: "css-loader",
+      options: {
+        camelCase: true,
+        modules: true,
+        importLoaders: 1,
+        sourceMap: generateSourceMap,
+        localIdentName: "[name]__[local]--[hash:base64:5]"
+      }
+    },
+    {
+      loader: "postcss-loader",
+      options: {
+        sourceMap: generateSourceMap
+      }
+    }
+  ]
 };
 
 const cssLoaderClient = {
-    test: /\.(css|scss)$/,
-    exclude: /node_modules/,
-    use: [
-        'css-hot-loader',
-        MiniCssExtractPlugin.loader,
-        {
-            loader: 'css-loader',
-            options: {
-                camelCase: true,
-                modules: true,
-                importLoaders: 1,
-                sourceMap: true,
-                localIdentName: '[name]__[local]--[hash:base64:5]',
-            },
-        },
-        {
-            loader: 'postcss-loader',
-            options: {
-                sourceMap: true,
-            },
-        },
-    ],
+  test: cssRegex,
+  exclude: cssModuleRegex,
+  use: [
+    "css-hot-loader",
+    MiniCssExtractPlugin.loader,
+    "css-loader",
+    {
+      loader: "postcss-loader",
+      options: {
+        sourceMap: generateSourceMap
+      }
+    }
+  ]
+};
+
+const cssModuleLoaderServer = {
+  test: cssModuleRegex,
+  use: [
+    {
+      loader: "css-loader/locals",
+      options: {
+        camelCase: true,
+        importLoaders: 1,
+        modules: true,
+        localIdentName: "[name]__[local]--[hash:base64:5]"
+      }
+    },
+    {
+      loader: "postcss-loader",
+      options: {
+        sourceMap: generateSourceMap
+      }
+    }
+  ]
 };
 
 const cssLoaderServer = {
-    test: /\.css$/,
-    exclude: /node_modules/,
-    use: [
-        {
-            loader: 'css-loader/locals',
-            options: {
-                camelCase: true,
-                importLoaders: 1,
-                modules: true,
-                localIdentName: '[name]__[local]--[hash:base64:5]',
-            },
-        },
-        {
-            loader: 'postcss-loader',
-            options: {
-                sourceMap: true,
-            },
-        },
-    ],
+  test: cssRegex,
+  exclude: cssModuleRegex,
+  loader: "css-loader"
 };
 
 const urlLoaderClient = {
-    test: /\.(png|jpe?g|gif|svg)$/,
-    loader: require.resolve('url-loader'),
-    options: {
-        limit: 2048,
-        name: 'assets/[name].[hash:8].[ext]',
-    },
+  test: /\.(png|jpe?g|gif|svg)$/,
+  loader: require.resolve("url-loader"),
+  options: {
+    limit: 2048,
+    name: "assets/[name].[hash:8].[ext]"
+  }
 };
 
 const urlLoaderServer = {
-    ...urlLoaderClient,
-    options: {
-        ...urlLoaderClient.options,
-        emitFile: false,
-    },
+  ...urlLoaderClient,
+  options: {
+    ...urlLoaderClient.options,
+    emitFile: false
+  }
 };
 
 const fileLoaderClient = {
-    exclude: [/\.(js|css|mjs|html|json|ejs)$/],
-    use: [
-        {
-            loader: 'file-loader',
-            options: {
-                name: 'assets/[name].[hash:8].[ext]',
-            },
-        },
-    ],
+  exclude: [/\.(js|css|mjs|html|json)$/],
+  use: [
+    {
+      loader: "file-loader",
+      options: {
+        name: "assets/[name].[hash:8].[ext]"
+      }
+    }
+  ]
 };
 
 const fileLoaderServer = {
-    exclude: [/\.(js|css|mjs|html|json|ejs)$/],
-    use: [
-        {
-            loader: 'file-loader',
-            options: {
-                name: 'assets/[name].[hash:8].[ext]',
-                emitFile: false,
-            },
-        },
-    ],
-};
-
-// Write css files from node_modules to its own vendor.css file
-const externalCssLoaderClient = {
-    test: /\.css$/,
-    include: /node_modules/,
-    use: [MiniCssExtractPlugin.loader, 'css-loader'],
-};
-
-// Server build needs a loader to handle external .css files
-const externalCssLoaderServer = {
-    test: /\.css$/,
-    include: /node_modules/,
-    loader: 'css-loader/locals',
+  exclude: [/\.(js|css|mjs|html|json)$/],
+  use: [
+    {
+      loader: "file-loader",
+      options: {
+        name: "assets/[name].[hash:8].[ext]",
+        emitFile: false
+      }
+    }
+  ]
 };
 
 const client = [
-    {
-        oneOf: [
-            babelLoader,
-            cssLoaderClient,
-            urlLoaderClient,
-            fileLoaderClient,
-            externalCssLoaderClient,
-        ],
-    },
+  {
+    oneOf: [
+      babelLoader,
+      cssModuleLoaderClient,
+      cssLoaderClient,
+      urlLoaderClient,
+      fileLoaderClient
+    ]
+  }
 ];
 const server = [
-    {
-        oneOf: [
-            babelLoader,
-            cssLoaderServer,
-            urlLoaderServer,
-            fileLoaderServer,
-            externalCssLoaderServer,
-        ],
-    },
+  {
+    oneOf: [
+      babelLoader,
+      cssModuleLoaderServer,
+      cssLoaderServer,
+      urlLoaderServer,
+      fileLoaderServer
+    ]
+  }
 ];
 
 module.exports = {
-    client,
-    server,
+  client,
+  server
 };
