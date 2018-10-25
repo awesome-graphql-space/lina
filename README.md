@@ -1,5 +1,4 @@
 <h1 align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
   <a href="https://linaframework.com" target="blank"><img src="https://cdn1.imggmi.com/uploads/2018/9/29/0a7d1413bd0bafe47d4be7df23505382-full.png" width="320" alt="Lina Logo" /></a>
 </h1>
 
