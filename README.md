@@ -87,7 +87,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/11243590?v=4" width="100px;"/><br /><sub><b>Rex Raphael</b></sub>](http://rexraphael.com)<br />[💬][📝] [🐛][💻][📖] [📋] [💡][🤔][🚇] [📦][🔌][👀][📢][⚠️][🔧] | [<img src="https://avatars0.githubusercontent.com/u/7845921?v=4" width="100px;"/><br /><sub><b>Manjula Subhashchandra Dube</b></sub>](https://www.linkedin.com/profile/view?id=181968473&trk=nav_responsive_tab_profile)<br />[💬][📝][💻][📖][📋][💡][💵][🔍][🤔][🚇][📦][🔌][👀] [📢][⚠️][🔧][🌍][✅][📹] |
+| [<img src="https://avatars2.githubusercontent.com/u/11243590?v=4" width="100px;"/><br /><sub><b>Rex Raphael</b></sub>](http://rexraphael.com)<br /> 💬 📝 🐛 💻 📖 📋 <br />💡 🤔 🚇 📦 <br /> 🔌 👀 📢 ⚠️ 🔧 | [<img src="https://avatars0.githubusercontent.com/u/7845921?v=4" width="100px;"/><br /><sub><b>Manjula Subhashchandra Dube</b></sub>](https://www.linkedin.com/profile/view?id=181968473&trk=nav_responsive_tab_profile)<br />💬 📝 💻 📖 📋 💡 <br /> 💵 🔍 🤔 🚇 <br /> 📦 🔌 👀 📢 ⚠️ <br /> 🔧 🌍 ✅ 📹 |
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
