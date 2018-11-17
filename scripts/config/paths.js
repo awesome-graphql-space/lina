@@ -10,6 +10,7 @@ const paths = {
     dotenv: resolveApp('.env'),
     src: resolveApp('src'),
     srcClient: resolveApp('src/client'),
+    components: resolveApp('src/client/app/components'),
     srcServer: resolveApp('src/client/ssr'),
     srcShared: resolveApp('src/client/app'),
     publicPath: '/static/',

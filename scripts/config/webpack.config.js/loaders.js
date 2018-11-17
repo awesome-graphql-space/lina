@@ -133,12 +133,32 @@ const fileLoaderServer = {
   ]
 };
 
+const lessLoader = {
+    test: /\.less$/,
+    use: [{
+      loader: 'style-loader' // creates style nodes from JS strings
+    }, {
+      loader: 'css-loader' // translates CSS into CommonJS
+    }, {
+      loader: 'less-loader', // compiles Less to CSS
+      options: {
+        modifyVars: {
+          'primary-color': 'yellow',
+          'link-color': '#1DA57A',
+          'border-radius-base': '2px',
+        },
+        javascriptEnabled: true,
+      }
+    }]
+}
+
 const client = [
   {
     oneOf: [
       babelLoader,
       cssModuleLoaderClient,
       cssLoaderClient,
+      lessLoader,
       urlLoaderClient,
       fileLoaderClient
     ]
@@ -150,6 +170,7 @@ const server = [
       babelLoader,
       cssModuleLoaderServer,
       cssLoaderServer,
+      lessLoader,
       urlLoaderServer,
       fileLoaderServer
     ]
