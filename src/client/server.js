@@ -6,7 +6,6 @@ import chalk from 'chalk';
 import manifestHelpers from 'express-manifest-helpers-audit-fix';
 import bodyParser from 'body-parser';
 
-
 import serverRender from './ssr/render';
 import paths from '../../scripts/config/paths';
 

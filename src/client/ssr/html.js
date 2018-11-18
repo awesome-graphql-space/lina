@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 export default class HTML extends React.Component {
 
   render() {
-		const { children, scripts, css, sheet } = this.props;
+		const { children, scripts, css, sheet, state } = this.props;
 		const head = Helmet.renderStatic();
 		
 		const styleTags = sheet.getStyleTags();
@@ -29,7 +29,10 @@ export default class HTML extends React.Component {
           <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
           {scripts.map((src) => {
               return <script key={src} src={src} />;
-          })}
+					})}
+					<script dangerouslySetInnerHTML={{
+						__html: `window.__APOLLO_STATE__=${JSON.stringify(state).replace(/</g, '\\u003c')};`,
+					}} />
         </body>
       </html>
     );
