@@ -15,6 +15,7 @@ function DefaultTemplate ({ header, sidebar, children}) {
         trigger={null}
         collapsible
         collapsed={false}
+        style={{ height: '100vh'}}
       >
         {sidebar && sidebar}
       </Sider>

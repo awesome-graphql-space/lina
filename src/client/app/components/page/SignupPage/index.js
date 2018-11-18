@@ -6,22 +6,23 @@ import Button from '../../atoms/Button';
 import Loci from '../../atoms/Loci';
 import LogoImage from '../../atoms/LogoImage';
 
-export const LoginPage = (params) => {
+export const SignupPage = (params) => {
   return (
     <Wrapper>
       <Center>
         <LogoImage />
         <br />
         <Inner>
-          <Loci type="H5">Lina Admin Login</Loci>
+          <Loci type="H5">Lina Admin Signup</Loci>
           <Input placeholder="Email" id="email" name="email" />
           <Input placeholder="Password" id="password" name="password" />
-          <Button block>LOGIN</Button>
+          <Input placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" />
+          <Button block>SIGNUP</Button>
         </Inner>
-        <Button link block asLink to="/signup">Don't an admin account? Signup</Button>
+        <Button link block asLink to="/login">Have an admin account? Login</Button>
       </Center>
     </Wrapper>
   );
 }
 
-export default LoginPage;
+export default SignupPage;

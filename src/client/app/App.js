@@ -11,7 +11,7 @@ import gql from 'graphql-tag';
 import routes from './routes';
 import './root.less';
 
-import { LoginPage, DashboardPage, NotFoundPage } from './components';
+import { LoginPage, DashboardPage, NotFoundPage, SignupPage } from './components';
 
 /* import {
 	getSchemaMainTypes,
@@ -29,6 +29,7 @@ class App extends React.Component {
 					<Switch>
 						<Route path="/" exact component={DashboardPage} />
 						<Route path="/login" component={LoginPage} />
+						<Route path="/signup" component={SignupPage} />
 						<Route path="*" component={NotFoundPage} />
 					</Switch>
 				</div>

@@ -1,25 +1,15 @@
-// @flow
 /* eslint-disable react/no-danger */
 import React from 'react';
 import Helmet from 'react-helmet';
 
-type PropsT = {
-	children: * ,
-	css: string[],
-	scripts: string[],
-	state: string,
-};
-
-export default class HTML extends React.Component<PropsT> {
-  static defaultProps = {
-  	css: [],
-  	scripts: [],
-  	state: '{}',
-  };
+export default class HTML extends React.Component {
 
   render() {
-    const head = Helmet.renderStatic();
-    const { children, scripts, css } = this.props;
+		const { children, scripts, css, sheet } = this.props;
+		const head = Helmet.renderStatic();
+		
+		const styleTags = sheet.getStyleTags();
+
     return (
       <html lang="">
         <head>
@@ -32,7 +22,8 @@ export default class HTML extends React.Component<PropsT> {
           {head.script.toComponent()}
           {css.map((href) => {
               return <link key={href} rel="stylesheet" href={href} />;
-          })}
+					})}
+					<style dangerouslySetInnerHTML={{__html: styleTags}} />
         </head>
         <body>
           <div id="app" dangerouslySetInnerHTML={{ __html: children }} />

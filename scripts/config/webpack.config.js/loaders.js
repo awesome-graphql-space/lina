@@ -170,7 +170,6 @@ const server = [
       babelLoader,
       cssModuleLoaderServer,
       cssLoaderServer,
-      lessLoader,
       urlLoaderServer,
       fileLoaderServer
     ]
