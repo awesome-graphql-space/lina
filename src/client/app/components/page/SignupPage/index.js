@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import { Wrapper, Inner, Center } from './styles';
 import Input from '../../atoms/Input';
@@ -9,17 +10,18 @@ import LogoImage from '../../atoms/LogoImage';
 export const SignupPage = (params) => {
   return (
     <Wrapper>
+      <Helmet defaultTitle="New Admin" />
       <Center>
         <LogoImage />
         <br />
         <Inner>
-          <Loci type="H5">Lina Admin Signup</Loci>
+          <Loci type="H5">New Admin</Loci>
           <Input placeholder="Email" id="email" name="email" />
           <Input placeholder="Password" id="password" name="password" />
           <Input placeholder="Confirm Password" id="confirmPassword" name="confirmPassword" />
-          <Button block>SIGNUP</Button>
+          <Button block="true">SIGNUP</Button>
         </Inner>
-        <Button link block asLink to="/login">Have an admin account? Login</Button>
+        <Button link="true" block="true" asLink="true" to="/login">Have an admin account? Login</Button>
       </Center>
     </Wrapper>
   );
