@@ -13,7 +13,7 @@ export const LOGIN = gql`
 `;
 
 export const LOGIN_USER = gql`
-    mutation loginUser($isLoggedIn: Boolean!, $token: String!){
+    mutation loginWithEmail($isLoggedIn: Boolean!, $token: String!){
         loginUser(isLoggedIn: $isLoggedIn, token: $token) @client{
             id
             loggedIn
