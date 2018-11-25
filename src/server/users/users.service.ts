@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { User } from '../../../gueva-api/src/graphql.schema';
+import { User } from '@server/graphql.schema';
 
 @Injectable()
 export class UsersService {

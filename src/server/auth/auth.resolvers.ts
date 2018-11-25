@@ -1,5 +1,5 @@
-import { CreateUserInput, AuthPayload, User } from './../graphql.schema.d';
-import { UsersService } from './../users/users.service';
+import { CreateUserInput, AuthPayload, User } from '../graphql.schema.d';
+import { UsersService } from '../users/users.service';
 import { Args, Mutation, Query, Resolver, Subscription, ResolveProperty, Parent, Context } from '@nestjs/graphql';
 import { PubSub } from 'graphql-subscriptions';
 

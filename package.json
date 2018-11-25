@@ -30,7 +30,10 @@
     "generate:docs": "npx typedoc --out docs/ src/ --mode file --module commonjs --target es6",
     "generate:defintions": "npx dts-generator --name node-advanced-api --project ./ --out node-advanced-api.d.ts",
     "generate-all": "npm run generate:defintions && npm run generate:docs",
-    "webpack": "webpack --env.NODE_ENV=development --env.watchFiles=true --config scripts/api-webpack.config.js"
+    "webpack": "webpack --env.NODE_ENV=development --env.watchFiles=true --config scripts/api-webpack.config.js",
+    "kill:ports": "npm run kill:port:fe && npm run kill:port:be",
+    "kill:port:be": "lsof -i tcp:8500 | grep LISTEN | awk '{print $2}' | xargs kill -9",
+    "kill:port:fe": "lsof -i tcp:8502 | grep LISTEN | awk '{print $2}' | xargs kill -9"
   },
   "lint-staged": {
     "*.{js,css}": [
@@ -55,6 +58,7 @@
     "node_modules"
   ],
   "dependencies": {
+    "@cloudnative/health-connect": "^1.0.0",
     "@material-ui/core": "^3.3.1",
     "@material-ui/icons": "^3.0.1",
     "@nestjs/common": "^5.4.0",
@@ -95,11 +99,13 @@
     "flow-bin": "^0.83.0",
     "graphql": "^14.0.2",
     "graphql-cost-analysis": "^1.0.2",
+    "graphql-import": "^0.7.1",
     "graphql-mqtt-subscriptions": "^1.1.0",
     "graphql-subscriptions": "^1.0.0",
     "graphql-tag": "^2.10.0",
     "graphql-tools": "^4.0.2",
     "graphql-type-json": "^0.2.1",
+    "graphschematojson": "^1.2.0",
     "hbs": "^4.0.1",
     "helmet": "^3.14.0",
     "history": "^4.7.2",
@@ -111,6 +117,7 @@
     "merge-graphql-schemas": "^1.5.7",
     "mini-css-extract-plugin": "^0.4.4",
     "mqtt": "^2.18.8",
+    "mysql": "^2.16.0",
     "node-fetch": "^2.3.0",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
@@ -122,6 +129,7 @@
     "pluralize": "^7.0.0",
     "polished": "^2.3.0",
     "pug": "^2.0.3",
+    "ramda": "^0.26.0",
     "react": "^16.7.0-alpha.2",
     "react-apollo": "^2.3.1",
     "react-dev-utils": "^6.0.5",
@@ -145,7 +153,7 @@
     "styled-components": "^4.1.1",
     "styled-is": "^1.1.5",
     "subscriptions-transport-ws": "^0.9.15",
-    "typeorm": "^0.2.8",
+    "typeorm": "^0.2.9",
     "typescript": "^2.6.2",
     "ws": "^6.1.0"
   },

@@ -39,6 +39,8 @@ async function bootstrap() {
   }));  // rate limit security options
   app.use(compression());  // rate limiting*/
 
+  //////////////////// SERVER MONITORING/////////////////
+
   ///////// START APP ///////
   await app.startAllMicroservicesAsync();
 

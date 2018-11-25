@@ -13,46 +13,53 @@ type PageInfo {
   endCursor: String
 }
 
-type Price {
-	basePrice: Float!
-	currency: CurrencyInput!
-	currentPrice: Float!
+"""Mutation request response."""
+interface MutationResponse {
+  code: String!
+  success: Boolean!
+  message: String!
 }
 
-enum CurrencyInput {
-  NA
-  USD
-  EU
-  PD
-  AUD
-}
+#type Price {
+#	basePrice: Float!
+#	currency: CurrencyInput!
+#	currentPrice: Float!
+#}
 
-type ProductAnalytics {
-	relevance: Float
-	views: Int!
-	totalProducts: Int
-	totalProductsSold: Int
-	totalCustomersRetained: Int
-	
-	# Sales & Profit
-	currentMonthSales: Int
-	previousMonthSales: Int
-	previousMonthProfit: Float
-	currentMonthProfit: Float
+#enum CurrencyInput {
+#  NA
+#  USD
+#  EU
+#  PD
+#  AUD
+#}
 
-}
-
-type BusinessAnalytics {
-	relevance: Float
-	views: Int!
-	totalProducts: Int
-	totalProductsSold: Int
-	totalCustomersRetained: Int
-	
-	# Sales & Profit
-	currentMonthSales: Int
-	previousMonthSales: Int
-	previousMonthProfit: Float
-	currentMonthProfit: Float
-
-}
+#type ProductAnalytics {
+#	relevance: Float
+#	views: Int!
+#	totalProducts: Int
+#	totalProductsSold: Int
+#	totalCustomersRetained: Int
+#	
+#	# Sales & Profit
+#	currentMonthSales: Int
+#	previousMonthSales: Int
+#	previousMonthProfit: Float
+#	currentMonthProfit: Float
+#
+#}
+#
+#type BusinessAnalytics {
+#	relevance: Float
+#	views: Int!
+#	totalProducts: Int
+#	totalProductsSold: Int
+#	totalCustomersRetained: Int
+#	
+#	# Sales & Profit
+#	currentMonthSales: Int
+#	previousMonthSales: Int
+#	previousMonthProfit: Float
+#	currentMonthProfit: Float
+#
+#}

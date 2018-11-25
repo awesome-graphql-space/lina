@@ -1,11 +1,3 @@
-export enum CurrencyInput {
-    NA = "NA",
-    USD = "USD",
-    EU = "EU",
-    PD = "PD",
-    AUD = "AUD"
-}
-
 export enum Role {
     ADMIN = "ADMIN",
     GUEST = "GUEST",
@@ -47,18 +39,6 @@ export class AuthPayload {
     user: User;
 }
 
-export class BusinessAnalytics {
-    relevance?: number;
-    views: number;
-    totalProducts?: number;
-    totalProductsSold?: number;
-    totalCustomersRetained?: number;
-    currentMonthSales?: number;
-    previousMonthSales?: number;
-    previousMonthProfit?: number;
-    currentMonthProfit?: number;
-}
-
 export abstract class IMutation {
     abstract signup(input?: CreateUserInput): User | Promise<User>;
     abstract signupWithEmail(input?: CreateUserInput): AuthPayload | Promise<AuthPayload>;
@@ -79,24 +59,6 @@ export class PageInfo {
     hasPreviousPage: boolean;
     startCursor?: string;
     endCursor?: string;
-}
-
-export class Price {
-    basePrice: number;
-    currency: CurrencyInput;
-    currentPrice: number;
-}
-
-export class ProductAnalytics {
-    relevance?: number;
-    views: number;
-    totalProducts?: number;
-    totalProductsSold?: number;
-    totalCustomersRetained?: number;
-    currentMonthSales?: number;
-    previousMonthSales?: number;
-    previousMonthProfit?: number;
-    currentMonthProfit?: number;
 }
 
 export abstract class IQuery {

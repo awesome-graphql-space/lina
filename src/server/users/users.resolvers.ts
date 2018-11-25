@@ -1,5 +1,5 @@
-import { AuthPayload, User } from './../../../gueva-api/src/graphql.schema.d';
-import { UsersService } from './../users/users.service';
+import { AuthPayload, User } from '../graphql.schema.d';
+import { UsersService } from '../users/users.service';
 import { ParseIntPipe, UseGuards } from '@nestjs/common';
 import { Args, Mutation, Query, Resolver, Subscription } from '@nestjs/graphql';
 import { PubSub } from 'graphql-subscriptions';
