@@ -215,7 +215,7 @@
     "postcss-nested": "^4.1.0",
     "postcss-normalize": "^7.0.1",
     "prettier": "^1.14.3",
-    "puppeteer": "1.9.0",
+    "puppeteer": "5.2.1",
     "react-dev-utils": "^6.0.4",
     "redux-mock-store": "^1.5.3",
     "regenerator-runtime": "^0.12.1",
