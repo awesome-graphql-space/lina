@@ -189,7 +189,7 @@
     "eslint-plugin-flowtype": "^2.50.3",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.10.0",
+    "eslint-plugin-react": "7.31.8",
     "eslint-plugin-security": "^1.4.0",
     "express": "^4.16.4",
     "express-manifest-helpers-audit-fix": "0.6.3",
