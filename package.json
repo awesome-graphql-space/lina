@@ -145,7 +145,7 @@
     "styled-components": "^4.1.1",
     "styled-is": "^1.1.5",
     "subscriptions-transport-ws": "^0.9.15",
-    "typeorm": "^0.2.8",
+    "typeorm": "^0.3.0",
     "typescript": "^2.6.2",
     "ws": "^6.1.0"
   },
